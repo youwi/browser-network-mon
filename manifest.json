@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "browser-network-mon",
+  "version": "1.0",
+  "description": "for automation test ,monitor the async network,log network STATUS",
+  "icons": {
+    "96": "favicon-200x200.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "<all_urls>"
+  ]
+}
